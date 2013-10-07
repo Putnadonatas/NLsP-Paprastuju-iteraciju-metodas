@@ -3,5 +3,5 @@ function [x1] = funkcija6b_isv(x)
 % Panaudojimas:
 %                x=1; funkcija6b_isv(x);
 %                funkcija6b_isv(10);
-x1=(1/3)*(x+6)^(-2/3);
+x1=(1/3)*(1/(x+6))^(2/3);
 end

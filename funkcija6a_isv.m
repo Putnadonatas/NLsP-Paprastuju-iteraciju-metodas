@@ -3,5 +3,5 @@ function [x1] = funkcija6a_isv(x)
 % Panaudojimas:
 %                x=1; fi_fun1a(x);
 %                fi_fun_1a(10);
-x1=(3x^2);
+x1=(3*x^2);
 end

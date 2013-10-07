@@ -1,4 +1,4 @@
-function [ans] = paprastujuImetodas(func,func_fi,x1,x2,E,xa)
+function [ans] = paprastujuImetodas(func,func_fi,func_fi_isv,x1,x2,E,xa)
 % randamas taskas kuris kerta x asi.
 %Func_fi isreiksta f-ja;
 % Naudojimas:
@@ -28,9 +28,9 @@ end
 
 %Antras--------------------------
 %konvergavimo salyga
-
-
-
+l=x1:0.01:x2;
+y=func_fi_isv(l);
+q=abs(max(y));
 %paklaida------------------------
 pk=abs(x2-x1);
 %While ciklas---------------------
