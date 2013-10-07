@@ -15,7 +15,7 @@ while 1
     break
  else
    a = x2;
-   saknis = paprastujuImetodas(func,x1,x2,dx,xa);
+   saknis = paprastujuImetodas(func,x1,x2);
     if ~isnan(saknis)
          saknusk = saknusk + 1;
          saknys(saknusk) = saknis;

@@ -13,6 +13,9 @@ function [x1,x2] = skaidosmetodas(func,a,b,dx)
 
 % disp(['uztruko interaciju: ',num2str(k)])]
 % TODO papildyti nargin apsauga
+if nargin < 4 
+     dx=0.01;
+	end
 
 if a>=b ; x1=NaN; x2=NaN; return; end;
 x1 = a; f1 = func(x1);
