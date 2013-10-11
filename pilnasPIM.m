@@ -1,12 +1,17 @@
 function saknys = pilnasPIM(func,fun_fi,funfi_isv,a,b,dx,filter,tol,xa)
-% Pusiaukirtos metodu surandami visi funkcijos f(x) nuliai intervale (a,b).
+% Paprastuju iteraciju metodu surandami visi funkcijos f(x) nuliai intervale (a,b).
 % IVEDIMO PARAMETRAI:
-%func - f-ja kaip m failas arba anonimine f-ja.
-% filter = singuliarumo filtras: 0 = iðjungta (pagal nutylejima), 1 = ijungta.
-% tol = paklaida (pagal nutylejima 0.0001).
-% dx = zingsnio ilgis kreipiantis i sklaidos metoda (b-a)/n
+%   @func - pradine f-ja.
+%   @fun_fi - isreiksta per kazkuri x f-ja.
+%   @funfi_isv - isreikstos f-jos isvestine.
+%   x1- pradinis intervalo skaicius, x2-galutinis intervalo skaicius.
+%   E-epsilonas maksimalus nuokrypis nuo galutinio rez (nebutina ivest)
+%   xa- skaicius intervale [x1;x2] (nebutina ivest)
+%   filter - singuliarumo filtras: 0 = iðjungta (pagal nutylejima), 1 = ijungta.
+%   tol - paklaida (pagal nutylejima 0.0001).
+%   dx - zingsnio ilgis kreipiantis i sklaidos metoda (b-a)/n
 %Paleidmas:
-%saknis = pusiaukirtosmetodas(@f-jos_vardas,x1,x2,filter,tol)
+%saknis = pilnasPIM(func,fun_fi,funfi_isv,a,b,dx,filter,tol,xa)
 
 if nargin<9 
            xa =a+(b-a)*rand(1);            

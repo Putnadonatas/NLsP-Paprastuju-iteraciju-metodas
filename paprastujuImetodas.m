@@ -1,9 +1,17 @@
 function [ans] = paprastujuImetodas(func,fun_fi,funfi_isv,x1,x2,E,xa)
-% randamas taskas kuris kerta x asi.
-%Func_fi isreiksta f-ja;
-% Naudojimas:
-%   a=10; b=20; E=0.1, xa=13;  paprastujuImetodas(@fi_func,a,b,E,xa);
-% paprastujuImetodas(@my_func,10,20,0.01,13);
+% Sia F-ja randamas taskas kuris kerta x asi.
+%Parametrai:
+%   @func - pradine f-ja.
+%   @fun_fi - isreiksta per kazkuri x f-ja.
+%   @funfi_isv - isreikstos f-jos isvestine.
+%   x1- pradinis intervalo skaicius, x2-galutinis intervalo skaicius.
+%   E-epsilonas maksimalus nuokrypis nuo galutinio rez (nebutina ivest)
+%   xa- skaicius intervale [x1;x2] (nebutina ivest)
+%Naudojimas:
+%   x1=1; x2=2; E=0.001; xa=1.5;
+%   z = paprastujuImetodas(@func,@fun_fi,@funfi_isv,x1,x2,E,xa);
+%   z= paprastujuImetodas(@func,@fun_fi,@funfi_isv,1,2,0.001,1.5)
+
 
 if nargin<7 
          xa =x1+(x2-x1)*rand(1);             
