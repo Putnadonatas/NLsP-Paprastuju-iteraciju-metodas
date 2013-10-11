@@ -5,7 +5,6 @@ function [ans] = paprastujuImetodas(func,fun_fi,funfi_isv,x1,x2,E,xa)
 %   a=10; b=20; E=0.1, xa=13;  paprastujuImetodas(@fi_func,a,b,E,xa);
 % paprastujuImetodas(@my_func,10,20,0.01,13);
 
-
 if nargin<7 
          xa =x1+(x2-x1)*rand(1);             
  end
