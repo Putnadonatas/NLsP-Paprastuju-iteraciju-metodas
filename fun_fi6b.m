@@ -3,5 +3,5 @@ function [x1] = fun_fi6b(x)
 % Panaudojimas:
 %                x=1; fun_fi6b(x);
 %                z=fun_fi6b(10);
-x1=(x+6)^(1/3);
+x1=(x + 6)^(1/3);
 end

@@ -43,7 +43,7 @@ while 1
 end
 end
 end
-x=a_pradinis:1:b
+x=a_pradinis:0.1:b
 y = func(x)
 plot(x,y)
 hold on;

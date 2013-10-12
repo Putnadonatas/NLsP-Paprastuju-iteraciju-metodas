@@ -26,7 +26,7 @@ f1 = func(x1);
 if abs(f1) <10^(-10); saknis = x1; return; end
 f2 = func(x2);
 if abs(f2) <10^(-10); saknis = x2; return; end
-if f1*f2 > 0;
+if f1*f2 > 0.0;
 error('Nurodytame intervale (x1,x2) nera funkcijos nulio')
 end
 %Antras--------------------------
@@ -34,10 +34,10 @@ end
 l= x1:0.1:x2;
 y=funfi_isv(l);
 q=abs(max(y));
+disp([num2str(q),' q']);
 %paklaida------------------------
 pk=abs(x2-x1);
-%While ciklas---------------------
-q=0.5;
+%While ciklas---------------------q=0.5;
 if q <1
 n=1;
 x(n)=xa;
