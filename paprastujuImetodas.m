@@ -12,7 +12,6 @@ function [ans] = paprastujuImetodas(func,fun_fi,funfi_isv,x1,x2,E,xa)
 %   z = paprastujuImetodas(@func,@fun_fi,@funfi_isv,x1,x2,E,xa);
 %   z= paprastujuImetodas(@func,@fun_fi,@funfi_isv,1,2,0.001,1.5)
 
-
 if nargin<7 
          xa =x1+(x2-x1)*rand(1);             
  end
@@ -38,6 +37,7 @@ disp([num2str(q),' q']);
 %paklaida------------------------
 pk=abs(x2-x1);
 %While ciklas---------------------q=0.5;
+x=zeros(1,100);
 if q <1
 n=1;
 x(n)=xa;

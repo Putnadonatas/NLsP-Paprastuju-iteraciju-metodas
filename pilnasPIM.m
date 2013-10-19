@@ -4,7 +4,7 @@ function saknys = pilnasPIM(func,fun_fi,funfi_isv,a,b,dx,filter,tol,xa)
 %   @func - pradine f-ja.
 %   @fun_fi - isreiksta per kazkuri x f-ja.
 %   @funfi_isv - isreikstos f-jos isvestine.
-%   x1- pradinis intervalo skaicius, x2-galutinis intervalo skaicius.
+%   a- pradinis intervalo skaicius, b-galutinis intervalo skaicius.
 %   E-epsilonas maksimalus nuokrypis nuo galutinio rez (nebutina ivest)
 %   xa- skaicius intervale [x1;x2] (nebutina ivest)
 %   filter - singuliarumo filtras: 0 = iðjungta (pagal nutylejima), 1 = ijungta.
