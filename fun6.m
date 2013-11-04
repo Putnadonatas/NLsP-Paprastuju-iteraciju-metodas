@@ -3,5 +3,5 @@ function [x1] = fun6(x)
 % Panaudojimas:
 %             x=1; z= fun6(x)
 %                  z= fun6(1)
-x1=x^3-x-6;
+x1=x.^3-x-6;
 end

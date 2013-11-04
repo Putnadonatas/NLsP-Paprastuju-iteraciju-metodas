@@ -7,6 +7,6 @@ function [ans] = fun6b_isv(x)
 %                funkcija6b_isv(10);
 if x>6
 ans=(3*(x+6)).^(-2/3);
-else ans=0;
+else ans=NaN;
 end
 end

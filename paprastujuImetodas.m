@@ -1,4 +1,4 @@
-function [ans] = paprastujuImetodas(func,fun_fi,funfi_isv,x1,x2,E,xa)
+function saknis = paprastujuImetodas(func,fun_fi,funfi_isv,x1,x2,E,xa)
 % Sia F-ja randamas taskas kuris kerta x asi.
 %Parametrai:
 %   @func - pradine f-ja.
@@ -13,8 +13,8 @@ function [ans] = paprastujuImetodas(func,fun_fi,funfi_isv,x1,x2,E,xa)
 %   z= paprastujuImetodas(@func,@fun_fi,@funfi_isv,1,2,0.001,1.5)
 
 if nargin<7 
-         xa =x1+(x2-x1)*rand(1);             
- end
+        xa =x1+(x2-x1)*rand(1);             
+end
 if nargin<6 
             E=0.01; 
  end
@@ -33,26 +33,25 @@ end
 l= x1:0.1:x2;
 y=funfi_isv(l);
 q=abs(max(y));
-disp([num2str(q),' q']);
 %paklaida------------------------
 pk=abs(x2-x1);
 %While ciklas---------------------q=0.5;
 x=zeros(1,100);
+answ=NaN;
 if q <1
-n=1;
-x(n)=xa;
-while pk > E
-   x(n+1)=fun_fi(x(n)); 
-   pk=((1-q)/q)*abs(x(n+1)-x(n));
-   n=n+1;
-   if (n>10000)
-               disp(['konvergavimo salyga nepatenkinta per', num2str(n), '100000 iteraciju']);
-               break;
-   end
-
-end
-ans=x(n);
+    n=1;
+    x(n)=xa;
+    while pk > E
+        x(n+1)=fun_fi(x(n)); 
+        pk=((1-q)/q)*abs(x(n+1)-x(n));
+        n=n+1;
+        if (n>10000)
+            disp(['konvergavimo salyga nepatenkinta per', num2str(n), '100000 iteraciju']);
+            break;
+        end
+    end
+    saknis=x(n);
 else disp('Jusu q>1'); 
-ans=NaN;    
+    saknis=NaN;
 end
  
